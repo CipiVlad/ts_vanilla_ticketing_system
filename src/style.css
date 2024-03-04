@@ -1,0 +1,31 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+/* ticket overview style */
+
+.body_overview {
+    background-color: #bbb5b5;
+}
+
+.navBar {
+    background-color: rgb(160, 40, 40);
+    color: salmon;
+    padding-bottom: 2vh;
+}
+
+.navBar a {
+    color: white;
+    text-decoration: none;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 5px;
+
+}
+
+/* create ticket style */
+.body_createTicket {
+    background-color: beige;
+}
