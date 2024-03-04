@@ -23,5 +23,4 @@
     two pages
     - overview page with problem overview
     - form page for input
-# ts_vanilla_ticketing_system
-# ts_vanilla_ticketing_system
+
