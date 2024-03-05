@@ -11,16 +11,43 @@
 </head>
 
 <body class="body_overview">
-     <header>
-           <nav class="navBar">
-              <h1>Ticketing Help Desk Service</h1>
-              <a href="index.html">Overview</a>
-              <a href="problemInput.html">Create Ticket</a>
-             </nav>
-         </header>
-      <div id="app"></div>
-      <div id="createTicketForm"></div> 
+  <header>
+    <nav class="navBar">
+      <h1>Ticketing Help Desk Service</h1>
+      <a href="index.html">Overview</a>
+      <a href="create-ticket.html">Create Ticket</a>
+    </nav>
+  </header>
 
+  <h2>Create A Ticket</h2>
+  <form id="form">
+    <label for="title">Title:</label>
+    <input id="title" type="text" name="title" placeholder="here goes your title">
+
+    <label for="description">Description:</label>
+    <textarea id="description" rows="10" cols="30"></textarea>
+
+    <label for="">Hardware?</label>
+    <input type="checkbox" name="hardware" id="hardware">
+    <label for="">Software?</label>
+    <input type="checkbox" name="software" id="software">
+
+    <label for="">Progress: </label>
+    <input type="checkbox" name="progress" id="progress">
+
+    <label for="priority">Priority:</label>
+    <label for="low">low:</label>
+    <input type="radio" name="" id="prioLow">
+    <label for="low">mid:</label>
+    <input type="radio" name="" id="prioMid">
+    <label for="low">high:</label>
+    <input type="radio" name="" id="prioHigh">
+
+    <input type="submit" value="Submit">
+  </form>
+
+  <div id="form-output"></div>
+  <div id="app"></div>
   <script type="module" src="/src/main.ts"></script>
 </body>
 

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/style.css">
+    <title>Create Ticket</title>
+</head>
+
+<body class="body_createTicket">
+    <header>
+        <nav class="navBar">
+            <h1>Ticketing Help Desk Service</h1>
+            <a href="index.html">Overview</a>
+            <!-- <a href="create-ticket.html">Create Ticket</a> -->
+        </nav>
+    </header>
+    <main>
+        <h2>Create A Ticket</h2>
+        <form id="form">
+            <label for="title">Title:</label>
+            <input id="title" type="text" name="title" placeholder="here goes your title">
+
+            <label for="description">Description:</label>
+            <textarea id="description" rows="10" cols="30"></textarea>
+
+            <label for="">Hardware?</label>
+            <input type="checkbox" name="hardware" value="Hardware">
+            <label for="">Software?</label>
+            <input type="checkbox" name="software" value="Hardware">
+
+
+
+            <input type="submit" value="Submit">
+        </form>
+
+        <div id="form-output"></div>
+
+    </main>
+    <script type="module" src="/src/createTicket.ts"></script>
+</body>
+
+</html>

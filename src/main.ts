@@ -4,10 +4,10 @@ import { v4 as uuid } from 'uuid';
 
 // ticket type objects
 export type ProblemOptions = {
-    hardware: "yes" | "no",
-    software: "yes" | "no",
-    solvingStatus: "done" | "undone"
-    priorityStatus: "low" | "mid" | "high"
+    hardware?: "yes" | "no",
+    software?: "yes" | "no",
+    solvingStatus?: "done" | "undone"
+    priorityStatus?: "low" | "mid" | "high"
 }
 
 export type ProblemDescription = {
@@ -21,6 +21,7 @@ export type Ticket = ProblemOptions & ProblemDescription;
 
 // Ticket Array Store
 export let store: Ticket[] = [];
+
 
 //create new ticket function
 function createNewTicket(props: Ticket) {
@@ -38,6 +39,71 @@ function createNewTicket(props: Ticket) {
 }
 
 
+// ----------------------------------------------------------------------
+
+
+// ----------------------------------------------------------------------
+
+
+
+//create ticket
+const form = document.getElementById('form') as HTMLFormElement;
+const title = document.getElementById('title') as HTMLInputElement;
+const description = document.getElementById('description') as HTMLTextAreaElement;
+const hardware = document.getElementById('hardware') as HTMLInputElement;
+const software = document.getElementById('software') as HTMLInputElement;
+const progress = document.getElementById('progress') as HTMLInputElement;
+const priority = document.getElementById('priority') as HTMLSelectElement;
+
+const prioLow = document.getElementById('prioLow') as HTMLInputElement;
+const prioMid = document.getElementById('prioMid') as HTMLInputElement;
+const prioHigh = document.getElementById('prioHigh') as HTMLInputElement;
+
+console.log(priority);
+
+
+
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    let newStoreItem: Ticket[] = [];
+
+    newStoreItem.push({
+        id: uuid().slice(0, 8),
+        title: title.value,
+        description: description.value,
+        hardware: hardware.checked ? "yes" : "no",
+        software: software.checked ? "yes" : "no",
+        solvingStatus: progress.checked ? "done" : "undone",
+        priorityStatus: prioLow.checked ? "low" : undefined
+            || prioMid.checked ? "mid" : undefined
+                || prioHigh.checked ? "high" : undefined
+
+    })
+
+    const render = newStoreItem.map((ticket, index) => {
+        return ` 
+                <h2>New Item Added!</h2>
+                <section key=${index} id="ticketCard" class="renderTicketCardContainer">  
+                <h4 id="title">Incidend: <a href="./detail.html">${ticket.title}</a></h4>
+                <p id="ticketNumber">Ticket Number: ${ticket.id}</p>
+                <p>Description: ${ticket.description}</p>
+                <p>Hardware Issue: ${ticket.hardware}</p>
+                <p>Software Issue: ${ticket.software}</p>
+                <p>Solving Status: ${ticket.solvingStatus}</p> 
+                <p>Priority: ${ticket.priorityStatus}</p> 
+                </section>
+        `
+    });
+
+    document.querySelector<HTMLDivElement[]>('#form-output')!.innerHTML = render;
+
+
+});
+
+// ----------------------------------------------------------------------
+
+
 //examples tickets hard coded 
 
 const newTicket: Ticket = {
@@ -52,7 +118,9 @@ const newTicket: Ticket = {
 
 createNewTicket(newTicket)
 
+// ----------------------------------------------------------------------
 
+// ----------------------------------------------------------------------
 //create ticket via generator function
 
 createNewTicket({
@@ -76,15 +144,12 @@ createNewTicket({
     description: "login works"
 });
 
-console.log(store);
-
 
 // render card
 
 const renderTicket = store.map((ticket, index) => {
     return ` 
-    <main class="renderTicketCardContainer">
-            <section key=${index} id="ticketCard" class="problems_container">    
+            <section key=${index} id="ticketCard" class="renderTicketCardContainer">    
                 <h4 id="title">Incidend: <a href="./detail.html">${ticket.title}</a></h4>
                 <p id="ticketNumber">Ticket Number: ${ticket.id}</p>
                 <p id="description">Description: ${ticket.description}</p>
@@ -93,12 +158,12 @@ const renderTicket = store.map((ticket, index) => {
                 <p id="status">Progress: ${ticket.solvingStatus}</p>
                 <p id="priority">Priority: ${ticket.priorityStatus}</p>
             </section>
-    </main>`
+    `
 
 });
 
-
-
 document.querySelector<HTMLDivElement[]>('#app')!.innerHTML = renderTicket;
+
+
 
 
