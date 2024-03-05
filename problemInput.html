@@ -18,8 +18,26 @@
     </header>
     <main>
         <h2>Create A Ticket</h2>
+    <form>
+        <label for="title">Title:</label>
+        <input 
+        id="title" 
+        type="text" 
+        name="title" 
+        placeholder="here goes your title">
+        
+        <label for="description">Description:</label>
+        <textarea rows="10" cols="30"></textarea>
+
+        <label for="">Hardware?</label>
+        <input type="checkbox" name="hardware" value="Hardware">
+        <label for="">Software?</label>
+        <input type="checkbox" name="software" value="Hardware">
+    </form>
     </main>
-    <script type="module" src="/src/main.ts"></script>
+    
+
+    <script type="module" src="/src/createTicket.ts"></script>
 </body>
 
 </html>

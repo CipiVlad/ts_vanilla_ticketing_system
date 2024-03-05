@@ -7,13 +7,13 @@ body {
 /* ticket overview style */
 
 .body_overview {
-    background-color: #bbb5b5;
+    background-color: #ddd7d7;
 }
 
 .navBar {
     background-color: rgb(160, 40, 40);
     color: salmon;
-    padding-bottom: 2vh;
+    padding: 4vh;
 }
 
 .navBar a {
@@ -22,10 +22,21 @@ body {
     border: 1px solid white;
     border-radius: 5px;
     padding: 5px;
+}
 
+.renderTicketCardContainer {
+    border: 2px solid rgb(160, 40, 40);
+    border-radius: 6px;
+    padding: 16px;
+    margin: 1em;
 }
 
 /* create ticket style */
 .body_createTicket {
     background-color: beige;
+}
+
+/* detail page style */
+#detailBody {
+    background-color: chocolate;
 }
