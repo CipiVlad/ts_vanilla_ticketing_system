@@ -27,5 +27,5 @@
 
 ---
 * npm RUN two separate terminals:
-(1) term1: npm run dev
-(2) term2: json-server --watch db.json --port 3001
+(1) npm run dev
+(2) json-server --watch db.json --port 3001
