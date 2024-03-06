@@ -4,21 +4,24 @@ import Form from './components/Form';
 import RenderTicket from './components/RenderTicket';
 import getIncidents from './utils/fetchAndDisplay';
 
-// call dummyData on util function 
-createNewTicket(ticket1)
-createNewTicket(ticket2);
-createNewTicket(ticket3);
-
-// call Form component for creating and rendering new ticket
-Form()
-
-// document.querySelector('#app')!.innerHTML = renderTicket;
-// must be under dummyData is called
-RenderTicket()
 
 
-async function main() {
+async function App() {
+
+    // call dummyData on util function 
+    createNewTicket(ticket1)
+    createNewTicket(ticket2);
+    createNewTicket(ticket3);
+
+    // call Form component for creating and rendering new ticket
+    Form()
+
+    // document.querySelector('#app')!.innerHTML = renderTicket;
+    // must be under dummyData is called
+    RenderTicket()
+
+
     await getIncidents()
 }
-
-main()
+// Start App
+App()
