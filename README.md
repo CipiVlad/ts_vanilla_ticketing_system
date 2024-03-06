@@ -18,15 +18,14 @@
     (d) check done / undone
     (e) urgency options
 
+---
+* Pages
 
-(3) app has
-    two pages
+(3) app has two pages
     - overview page with problem overview
     - form page for input
 
-
-
-* RUN 
-two separate terminals:
-term1: npm run dev
-term2: json-server --watch db.json --port 3001
+---
+* npm RUN two separate terminals:
+(1) term1: npm run dev
+(2) term2: json-server --watch db.json --port 3001
