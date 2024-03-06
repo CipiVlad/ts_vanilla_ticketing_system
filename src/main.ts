@@ -29,7 +29,7 @@ const renderTicket = store.map((ticket, index) => {
 
 });
 
-document.querySelector<HTMLDivElement[]>('#app')!.innerHTML = renderTicket;
+document.querySelector('#app')!.innerHTML = renderTicket;
 
 
 

@@ -1,0 +1,31 @@
+{
+    "ticket": [
+        {
+            "id": "1",
+            "hardware": "no",
+            "software": "yes",
+            "solvingStatus": "undone",
+            "priorityStatus": "high",
+            "title": "ERROR 404",
+            "description": "Page Not Found"
+        },
+        {
+            "id": "2",
+            "hardware": "no",
+            "software": "yes",
+            "solvingStatus": "undone",
+            "priorityStatus": "high",
+            "title": "ERROR 404",
+            "description": "Page Not Found"
+        },
+        {
+            "id": "3",
+            "hardware": "no",
+            "software": "yes",
+            "solvingStatus": "undone",
+            "priorityStatus": "high",
+            "title": "ERROR 404",
+            "description": "Page Not Found"
+        }
+    ]
+}
