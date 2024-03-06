@@ -1,7 +1,6 @@
 import { store } from "../models/ticket.model";
 
 export default function RenderTicket() {
-
     const ticket = store.map((ticket, index) => {
         return ` 
             <section key=${index} id="ticketCard" class="renderTicketCardContainer">    

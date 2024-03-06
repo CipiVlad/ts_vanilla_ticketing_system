@@ -1,4 +1,4 @@
-# Ticketing App For Help Desk
+# Ticketing App For Help Desk in Vanilla Typescript 
 
 * TASK
 (1) build a ticketing system where it-support can choose between 
@@ -24,3 +24,8 @@
     - overview page with problem overview
     - form page for input
 
+
+
+* run two separate terminals:
+term1: npm run dev
+term2: json-server --watch db.json --port 3001

@@ -1,13 +1,13 @@
 {
-    "ticket": [
+    "tickets": [
         {
             "id": "1",
             "hardware": "no",
             "software": "yes",
             "solvingStatus": "undone",
             "priorityStatus": "high",
-            "title": "ERROR 404",
-            "description": "Page Not Found"
+            "title": "ERROR 501",
+            "description": "Internal Server Error"
         },
         {
             "id": "2",
@@ -22,10 +22,10 @@
             "id": "3",
             "hardware": "no",
             "software": "yes",
-            "solvingStatus": "undone",
-            "priorityStatus": "high",
-            "title": "ERROR 404",
-            "description": "Page Not Found"
+            "solvingStatus": "done",
+            "priorityStatus": "mid",
+            "title": "Status 200 OK",
+            "description": "Server Message Recieved"
         }
     ]
 }
