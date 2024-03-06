@@ -46,8 +46,6 @@ export default function Form() {
         `
         });
 
-        document.querySelector<HTMLDivElement[]>('#form-output')!.innerHTML = renderNewTicket;
-
-
+        document.querySelector('#form-output').innerHTML = renderNewTicket;
     })
 }

@@ -18,7 +18,6 @@ export const ticket2: Ticket = {
     priorityStatus: "low",
     title: "shu",
     description: "login not working"
-
 }
 
 export const ticket3: Ticket =
