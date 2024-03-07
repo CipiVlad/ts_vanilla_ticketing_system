@@ -5,12 +5,13 @@ https://www.digitalocean.com/community/tutorials/js-axios-vanilla-js
 
 Next Steps App Refactoring and Expand:
 
+[] html js radio button check uncheck
 [] redirect after form submit to index.html
 [] set "Ticket" model fields to be "required"
 [] hit a-tag on index.html "title" and  redirect to detail.html 
    
     [] @detail.html:
-        [] fetch ticket by id
+        [X] fetch ticket by id
         [] delete ticket button --> delete ticket by id 
         [] edit ticket button 
         [] create @edit.html: use "Form()" component to edit 

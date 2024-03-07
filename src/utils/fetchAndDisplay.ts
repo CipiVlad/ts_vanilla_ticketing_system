@@ -5,8 +5,10 @@ export default async function getIncidents() {
     try {
         const response = await axios.get('http://localhost:3001/tickets')
         const tickets = response.data;
+        console.log(tickets);
+
         display(tickets)
-        // return response.data
+        return response.data
     }
     catch (errors) {
         console.error(errors);
@@ -14,15 +16,24 @@ export default async function getIncidents() {
     }
 }
 
-export function display(tickets: Ticket[]) {
+
+function display(tickets: Ticket[]) {
     //create dynamic html-elements
     //loop through each fetched Item and create elements
 
-    tickets.forEach((element) => {
+    tickets.map((element) => {
         const section = document.createElement('section');
         section.classList.add('renderTicketCardContainer')
         const h4 = document.createElement('h4')
-        h4.innerHTML = `Incident: <a href="./detail.html">${element.title}</a>`;
+
+        /*  Explanation of line 30: 
+            we need to add a link to the detailpage so that when we click on the link
+            then we need to add the id to the link in the href attribute of the <a> tag 
+            and the "?id=${element.id}" is the query string
+        */
+
+        h4.innerHTML = `Incident: <a href="http://localhost:5173/detail.html?id=${element.id}">${element.title}</a>`;
+
         const ticketNum = document.createElement('p')
         ticketNum.innerHTML = `Ticket Number: ${element.id}`
         const description = document.createElement('p')
