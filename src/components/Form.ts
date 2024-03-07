@@ -1,5 +1,6 @@
 import { v4 as uuid } from 'uuid';
 import { Ticket } from '../models/ticket.model';
+import axios from 'axios';
 
 //HTML Reference
 const form = document.getElementById('form') as HTMLFormElement;
@@ -13,12 +14,13 @@ const prioMid = document.getElementById('prioMid') as HTMLInputElement;
 const prioHigh = document.getElementById('prioHigh') as HTMLInputElement;
 
 export default function Form() {
+
+    //onsubmit
     form.addEventListener('submit', (event) => {
         event.preventDefault();
 
-        let newStoreItem: Ticket[] = [];
-
-        newStoreItem.push({
+        let newStoreItem: Ticket =
+        {
             id: uuid().slice(0, 8),
             title: title.value,
             description: description.value,
@@ -29,9 +31,21 @@ export default function Form() {
                 || prioMid.checked ? "mid" : undefined
                     || prioHigh.checked ? "high" : undefined
 
-        })
+        };
 
-        const renderNewTicket = newStoreItem.map((ticket, index) => {
+
+        //add and send new ticket to db.json
+        const sendData = async () => {
+            const response = await axios.post('http://localhost:3001/tickets', newStoreItem)
+            console.log(response.data)
+            return response
+        }
+        sendData()
+
+
+        //render newStoreItem after sendData() on top
+        //disappearing after refresh 
+        const renderNewTicket = [newStoreItem].map((ticket, index) => {
             return ` 
                 <h2>New Incidend Added!</h2>
                 <section key=${index} id="ticketCard" class="renderTicketCardContainer">  

@@ -9,9 +9,9 @@ import getIncidents from './utils/fetchAndDisplay';
 async function App() {
 
     // call dummyData on util function 
-    createNewTicket(ticket1)
-    createNewTicket(ticket2);
-    createNewTicket(ticket3);
+    // createNewTicket(ticket1)
+    // createNewTicket(ticket2);
+    // createNewTicket(ticket3);
 
     // call Form component for creating and rendering new ticket
     Form()

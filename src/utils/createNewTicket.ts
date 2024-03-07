@@ -1,3 +1,7 @@
+// this is a utility function for hard-coding dummy data
+// used for workflow, called in main.ts to display data
+// then uncommented call in main.ts
+
 import { v4 as uuid } from 'uuid';
 import { Ticket, store } from "../models/ticket.model"
 
