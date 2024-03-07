@@ -5,7 +5,6 @@ export default async function getIncidents() {
     try {
         const response = await axios.get('http://localhost:3001/tickets')
         const tickets = response.data;
-
         display(tickets)
         // return response.data
     }
@@ -15,7 +14,7 @@ export default async function getIncidents() {
     }
 }
 
-function display(tickets: Ticket[]) {
+export function display(tickets: Ticket[]) {
     //create dynamic html-elements
     //loop through each fetched Item and create elements
 

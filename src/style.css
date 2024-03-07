@@ -32,6 +32,23 @@ body {
 }
 
 /* create ticket style */
+
+.createTicket_display h2 {
+    text-align: center;
+}
+
+.heading_and_button_flexbox {
+    display: flex;
+    justify-content: center;
+    margin: 2vh;
+}
+
+#openForm {
+    border: none;
+    cursor: pointer;
+    width: 20px;
+}
+
 .body_createTicket {
     background-color: beige;
 }

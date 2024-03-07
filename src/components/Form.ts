@@ -14,11 +14,9 @@ const prioMid = document.getElementById('prioMid') as HTMLInputElement;
 const prioHigh = document.getElementById('prioHigh') as HTMLInputElement;
 
 export default function Form() {
-
+    console.log('form component importet to create-ticket.html')
     //onsubmit
-    form.addEventListener('submit', (event) => {
-        event.preventDefault();
-
+    form.addEventListener('submit', () => {
         let newStoreItem: Ticket =
         {
             id: uuid().slice(0, 8),
@@ -41,27 +39,6 @@ export default function Form() {
             return response
         }
         sendData()
-
-
-        //render newStoreItem after sendData() on top
-        //disappearing after refresh 
-        const renderNewTicket = [newStoreItem].map((ticket, index) => {
-            return ` 
-                <h2>New Incidend Added!</h2>
-                <section key=${index} id="ticketCard" class="renderTicketCardContainer">  
-                <h4 id="title">Incidend: <a href="./detail.html">${ticket.title}</a></h4>
-                <p id="ticketNumber">Ticket Number: ${ticket.id}</p>
-                <p>Description: ${ticket.description}</p>
-                <p>Hardware Issue: ${ticket.hardware}</p>
-                <p>Software Issue: ${ticket.software}</p>
-                <p>Solving Status: ${ticket.solvingStatus}</p> 
-                <p>Priority: ${ticket.priorityStatus}</p> 
-                </section>
-        `
-        });
-
-        document.querySelector<HTMLDivElement[]>('#form-output')!.innerHTML = renderNewTicket;
-
 
     })
 }

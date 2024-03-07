@@ -26,19 +26,29 @@
             <textarea id="description" rows="10" cols="30"></textarea>
 
             <label for="">Hardware?</label>
-            <input type="checkbox" name="hardware" value="Hardware">
+            <input type="checkbox" name="hardware" id="hardware">
             <label for="">Software?</label>
-            <input type="checkbox" name="software" value="Hardware">
+            <input type="checkbox" name="software" id="software">
 
+            <label for="">Progress: </label>
+            <input type="checkbox" name="progress" id="progress">
 
+            <label for="priority">Priority:</label>
+            <label for="low">low:</label>
+            <input type="radio" name="" id="prioLow">
+            <label for="low">mid:</label>
+            <input type="radio" name="" id="prioMid">
+            <label for="low">high:</label>
+            <input type="radio" name="" id="prioHigh">
 
             <input type="submit" value="Submit">
         </form>
 
+
         <div id="form-output"></div>
 
     </main>
-    <script type="module" src="/src/createTicket.ts"></script>
+    <script type="module" src="/src/create-ticket.ts"></script>
 </body>
 
 </html>
