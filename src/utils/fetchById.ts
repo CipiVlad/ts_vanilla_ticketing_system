@@ -50,6 +50,20 @@ export function displayDetail(element: Ticket[]) {
     const priorityStatus = document.createElement('p')
     priorityStatus.innerHTML = `Priority: ${element[0].priorityStatus}`
 
+    //edit button
+    const editAnchorTag = document.createElement('a')
+    editAnchorTag.setAttribute('href', "http://localhost:5173/edit-ticket.html")
+    editAnchorTag.classList.add('editLink')
+    editAnchorTag.innerHTML = 'edit'
+
+
+    //delete button
+    const deleteButton = document.createElement('button')
+    deleteButton.classList.add('deleteButton')
+    deleteButton.innerHTML = 'delete'
+
+
+    // append elements to parent element "section"
     section.appendChild(h4)
     section.appendChild(ticketNum)
     section.appendChild(description)
@@ -57,6 +71,8 @@ export function displayDetail(element: Ticket[]) {
     section.appendChild(software)
     section.appendChild(solvingStatus)
     section.appendChild(priorityStatus)
+    section.appendChild(editAnchorTag)
+    section.appendChild(deleteButton)
     document.body.querySelector('#incidentById')!.appendChild(section)
 
 }

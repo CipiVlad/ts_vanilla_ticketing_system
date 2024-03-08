@@ -97,3 +97,63 @@ body {
 #detailBody {
     background-color: #e0e0e0;
 }
+
+
+.editLink {
+    text-decoration: none;
+    touch-action: manipulation;
+    border-radius: 8px;
+    border: 0;
+    padding: 10px 16px;
+    background-image: linear-gradient(to bottom, #84b709, #46a100);
+
+    box-shadow: inset 0 -2px Rgb(0 0 0/0.2), 0 2px 4px Rgb(0 0 0/0.2);
+    text-align: center;
+    font-weight: 600;
+    color: #fff;
+    transition-property: transform, opacity;
+    transition-duration: .4s, .2s;
+    transition-timing-function: cubic-bezier(0.55, 1, 0.15, 1), ease-in-out;
+}
+
+.editLink:active:not(:disabled) {
+    text-decoration: none;
+    transform: scale(0.92);
+}
+
+.editLink:disabled {
+    background-image: linear-gradient(to bottom, #9f9f9f, #848484);
+    cursor: not-allowed;
+}
+
+.editLink:disabled {
+    opacity: .4;
+}
+
+.deleteButton {
+    touch-action: manipulation;
+    border-radius: 8px;
+    border: 0;
+    padding: 10px 16px;
+    background-image: linear-gradient(to bottom, rgb(180, 20, 20), rgb(160, 40, 40));
+    box-shadow: inset 0 -2px Rgb(0 0 0/0.2), 0 2px 4px Rgb(0 0 0/0.2);
+    text-align: center;
+    font-weight: 600;
+    color: #fff;
+    transition-property: transform, opacity;
+    transition-duration: .4s, .2s;
+    transition-timing-function: cubic-bezier(0.55, 1, 0.15, 1), ease-in-out;
+}
+
+.deleteButton:active:not(:disabled) {
+    transform: scale(0.92);
+}
+
+.deleteButton:disabled {
+    background-image: linear-gradient(to bottom, #9f9f9f, #848484);
+    cursor: not-allowed;
+}
+
+.deleteButton:disabled {
+    opacity: .4;
+}
