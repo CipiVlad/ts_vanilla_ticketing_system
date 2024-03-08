@@ -22,16 +22,17 @@ function display(tickets: Ticket[]) {
     //loop through each fetched Item and create elements
 
     tickets.map((element) => {
+
         const section = document.createElement('section');
         section.classList.add('renderTicketCardContainer')
-        const h4 = document.createElement('h4')
 
         /*  Explanation of line 30: 
-            we need to add a link to the detailpage so that when we click on the link
-            then we need to add the id to the link in the href attribute of the <a> tag 
-            and the "?id=${element.id}" is the query string
+        we need to add a link to the detailpage so that when we click on the link
+        then we need to add the id to the link in the href attribute of the <a> tag 
+        and the "?id=${element.id}" is the query string
         */
 
+        const h4 = document.createElement('h4')
         h4.innerHTML = `Incident: <a href="http://localhost:5173/detail.html?id=${element.id}">${element.title}</a>`;
 
         const ticketNum = document.createElement('p')
@@ -46,6 +47,7 @@ function display(tickets: Ticket[]) {
         solvingStatus.innerHTML = `Progress: ${element.solvingStatus}`
         const priorityStatus = document.createElement('p')
         priorityStatus.innerHTML = `Priority: ${element.priorityStatus}`
+
 
         section.appendChild(h4)
         section.appendChild(ticketNum)

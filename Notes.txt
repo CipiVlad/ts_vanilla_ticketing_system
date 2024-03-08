@@ -8,7 +8,7 @@ Next Steps App Refactoring and Expand:
 [] html js radio button check uncheck
 [] redirect after form submit to index.html
 [] set "Ticket" model fields to be "required"
-[] hit a-tag on index.html "title" and  redirect to detail.html 
+[] hit a-tag on index.html "title" and redirect to detail.html 
    
     [] @detail.html:
         [X] fetch ticket by id
