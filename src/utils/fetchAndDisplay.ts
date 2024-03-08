@@ -33,7 +33,7 @@ function display(tickets: Ticket[]) {
         */
 
         const h4 = document.createElement('h4')
-        h4.innerHTML = `Incident: <a href="http://localhost:5173/detail.html?id=${element.id}">${element.title}</a>`;
+        h4.innerHTML = `<a href="http://localhost:5173/detail.html?id=${element.id}">${element.title}</a>`;
 
         const ticketNum = document.createElement('p')
         ticketNum.innerHTML = `Ticket Number: ${element.id}`
@@ -52,10 +52,10 @@ function display(tickets: Ticket[]) {
         section.appendChild(h4)
         section.appendChild(ticketNum)
         section.appendChild(description)
-        section.appendChild(hardware)
-        section.appendChild(software)
-        section.appendChild(solvingStatus)
-        section.appendChild(priorityStatus)
+        // section.appendChild(hardware)
+        // section.appendChild(software)
+        // section.appendChild(solvingStatus)
+        // section.appendChild(priorityStatus)
         document.body.querySelector('#app')!.appendChild(section)
     });
 }

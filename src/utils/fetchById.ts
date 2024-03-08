@@ -30,7 +30,7 @@ export function displayDetail(element: Ticket[]) {
     section.classList.add('renderTicketCardContainer')
 
     const h4 = document.createElement('h4')
-    h4.innerHTML = `Incident Details of: ${element[0].title}`;
+    h4.innerHTML = `Incident Details Of: <span>${element[0].title}</span>`;
 
     const ticketNum = document.createElement('p')
     ticketNum.innerHTML = `Ticket Number: ${element[0].id}`
