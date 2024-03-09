@@ -6,7 +6,7 @@ https://www.digitalocean.com/community/tutorials/js-axios-vanilla-js
 Next Steps App Refactoring and Expand after base setup:
 
 [] style create-ticket / edit form
-[] html js radio button check uncheck
+[x] html js radio button check -  uncheck
 [x] redirect after form submit to index.html
 [] set "Ticket" model fields to be "required" // error msg: "All fields required!"
 [] add a field to Ticket model with npm, for "AutoIncrement" from mongoose-seqence for updating Ticket Numbers
