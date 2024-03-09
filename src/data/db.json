@@ -26,14 +26,6 @@
       "priorityStatus": "mid",
       "title": "Status 200 OK",
       "description": "Server Message Recieved"
-    },
-    {
-      "id": "399c7d8e",
-      "title": "aadf",
-      "description": "",
-      "hardware": "no",
-      "software": "no",
-      "solvingStatus": "undone"
     }
   ]
 }

@@ -16,7 +16,8 @@ const prioHigh = document.getElementById('prioHigh') as HTMLInputElement;
 export default function Form() {
     console.log('form component importet to create-ticket.html')
     //onsubmit
-    form.addEventListener('submit', () => {
+    form.addEventListener('submit', (event) => {
+        event.preventDefault()
         let newStoreItem: Ticket =
         {
             id: uuid().slice(0, 8),
@@ -37,8 +38,12 @@ export default function Form() {
             const response = await axios.post('http://localhost:3001/tickets', newStoreItem)
             console.log(response.data)
             return response
+
         }
         sendData()
+
+        //navigate after submit
+        window.location.href = 'http://localhost:5173/index.html';
 
     })
 }

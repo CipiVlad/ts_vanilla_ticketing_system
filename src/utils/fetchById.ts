@@ -1,5 +1,6 @@
 import axios from "axios";
 import { Ticket } from "../models/ticket.model";
+import deleteTicket from "./deleteTicket";
 
 
 export default async function getDetailedTicket(id: string) {
@@ -56,12 +57,22 @@ export function displayDetail(element: Ticket[]) {
     editAnchorTag.classList.add('editLink')
     editAnchorTag.innerHTML = 'edit'
 
-
     //delete button
     const deleteButton = document.createElement('button')
     deleteButton.classList.add('deleteButton')
     deleteButton.innerHTML = 'delete'
+    deleteButton.addEventListener('click', () => {
+        if (confirm('Would you like to delete this ticket?')
+        ) {
+            deleteTicket(element[0].id)
+            //navigate to back to index.html after successfully deleting ticket
+            window.location.href = 'http://localhost:5173/index.html'
 
+        }
+        // if not confirmed say:
+        console.log('nope!');
+
+    })
 
     // append elements to parent element "section"
     section.appendChild(h4)
