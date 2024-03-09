@@ -3,17 +3,32 @@ https://www.digitalocean.com/community/tutorials/js-axios-vanilla-js
 
 
 
-Next Steps App Refactoring and Expand:
+Next Steps App Refactoring and Expand after base setup:
 
-[] style create-ticket form
+[] style create-ticket / edit form
 [] html js radio button check uncheck
-[] redirect after form submit to index.html
-[] set "Ticket" model fields to be "required"
+[x] redirect after form submit to index.html
+[] set "Ticket" model fields to be "required" // error msg: "All fields required!"
+[] add a field to Ticket model with npm, for "AutoIncrement" from mongoose-seqence for updating Ticket Numbers
 [X] hit a-tag on index.html "title" and redirect to detail.html 
 [] create-ticket submit adapt button css style   
 
-[] @detail.html:
+[x] @detail.html:
         [X] fetch ticket by id
-        [] delete ticket button --> delete ticket by id 
+        [x] delete ticket button --> delete ticket by id 
         [X] edit ticket button 
         [X] create @edit.html: use "Form()" component to edit 
+
+***extra features***
+[] filter Incidents in Overview by title, ticket number, priority or description // create input searchfield in navBar therefore
+[] create a new page ("archive.html") for archiving Incidents marked as "done",
+   therefore: 
+   [] quick mark-as-done option displayed on each Incident card in index.html
+   [] ask for "confirm" before mark-as-done
+   [] if marked as done send it to http://localhost:3001/archive 
+   [] include filter option as well as on index.html, with possibility to undo "mark-as-done" and send back to 
+      http://localhost:3001/tickets
+   [] also in archive.html: include edit and delete option
+
+   [] add more information to Ticket model like:
+      - customer contact data to be displayed ticket card in detail.html
