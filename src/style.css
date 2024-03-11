@@ -3,6 +3,7 @@
 body {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
     font-family: "Rajdhani", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -82,27 +83,69 @@ body {
     background-color: beige;
 }
 
+.form_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #form {
     background-color: rgb(211, 153, 153);
     border: 12px solid rgb(160, 40, 40);
     border-radius: 6px;
     padding: 16px;
     margin: 1em;
+    width: 500px;
+
 }
 
-#form label,
-#form input {
+#form .textInputs label,
+#form .textInputs label,
+#form .textInputs input,
+#form .textInputs textarea {
     display: block;
     padding: 0.2em;
+    width: 100%;
+    border: 0px solid transparent;
+    border-radius: 10px;
+    padding: 16px 0;
 }
 
+#form .textInputs input::placeholder,
+#form .textInputs textarea {
+    font-family: "Rajdhani", sans-serif;
+}
 
+.submitTicket_container {
+    margin: 2em 0;
+}
+
+.submitButton {
+    width: 100px;
+    /* padding: 10px 16px; */
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    touch-action: manipulation;
+    border-radius: 8px;
+    border: 0;
+    padding: 10px 16px;
+    background-image: linear-gradient(to bottom, #84b709, #46a100);
+    box-shadow: inset 0 -2px Rgb(0 0 0/0.2), 0 2px 4px Rgb(0 0 0/0.2);
+    text-align: center;
+    font-family: "Rajdhani", sans-serif;
+    font-family: ;
+    font-weight: 400;
+    color: #fff;
+    transition-property: transform, opacity;
+    transition-duration: .4s, .2s;
+    transition-timing-function: cubic-bezier(0.55, 1, 0.15, 1), ease-in-out;
+}
 
 /* detail page style */
 #detailBody {
     background-color: #e0e0e0;
 }
-
 
 .editLink {
     width: 100px;
