@@ -13,7 +13,6 @@ const title = document.getElementById('editTitle') as HTMLInputElement;
 const description = document.getElementById('editDescription') as HTMLTextAreaElement;
 
 
-
 async function editTicket() {
     const updatedTicketObj: Ticket = {
         id: uuid(),

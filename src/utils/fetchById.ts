@@ -73,7 +73,7 @@ export function displayDetail(element: Ticket[]) {
 
         }
         // if not confirmed say:
-        console.log('nope!');
+        console.log('cancelled!');
 
     })
 

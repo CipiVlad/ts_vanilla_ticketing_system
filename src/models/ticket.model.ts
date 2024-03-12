@@ -1,9 +1,9 @@
 // ticket type objects
 type ProblemOptions = {
-    hardware?: "yes" | "no",
-    software?: "yes" | "no",
-    solvingStatus?: "done" | "undone"
-    priorityStatus?: "low" | "mid" | "high"
+    hardware: "yes" | "no",
+    software: "yes" | "no",
+    solvingStatus: "done" | "undone"
+    priorityStatus: "low" | "mid" | "high"
 }
 
 type ProblemDescription = {

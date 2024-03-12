@@ -19,15 +19,16 @@
     <main class="form_container">
         <form id="form">
             <div class="textInputs">
-            <h3>Incident: </h3>
+                <h3>Incident: </h3>
                 <label for="title">Title:</label>
-                <input id="title" type="text" name="title" placeholder="here goes your title">
-                <label for="description" >Description:</label>
-                <textarea id="description" placeholder="…and here your description" rows="10" cols="30"></textarea>
+                <input id="title" type="text" name="title" placeholder="here goes your title" required>
+                <label for="description">Description:</label>
+                <textarea id="description" placeholder="…and here your description" rows="10" cols="30"
+                    required></textarea>
             </div>
 
             <div class="category">
-            <h3>Problem:</h3>
+                <h3>Problem:</h3>
                 <label for="">Hardware?</label>
                 <input type="checkbox" name="hardware" id="hardware">
                 <label for="">Software?</label>
@@ -35,9 +36,9 @@
             </div>
 
             <div class="status">
-            <h3>Status:</h3>
+                <h3>Status:</h3>
                 <label for="progress">Progress: <em>done / undone</em> </label>
-                <input type="checkbox" name="progress" id="progress">
+                <input type="checkbox" name="progress" id="progress" required>
                 <span>|</span>
                 <label for="priority">Priority:</label>
                 <em><label for="low">low:</label></em>
@@ -49,7 +50,7 @@
             </div>
 
             <div class="submitTicket_container">
-              <input type="submit" value="Submit" class="submitButton">
+                <input type="submit" value="Submit" class="submitButton">
             </div>
         </form>
 
