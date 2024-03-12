@@ -5,13 +5,14 @@ https://www.digitalocean.com/community/tutorials/js-axios-vanilla-js
 
 Next Steps App Refactoring and Expand after base setup:
 
-[] style create-ticket / edit form
+[x] style create-ticket / edit form
+[]  edit-form must show data inside input/checkox fields
 [x] html js radio button check -  uncheck
 [x] redirect after form submit to index.html
 [] set "Ticket" model fields to be "required" // error msg: "All fields required!"
 [] add a field to Ticket model with npm, for "AutoIncrement" from mongoose-seqence for updating Ticket Numbers
 [X] hit a-tag on index.html "title" and redirect to detail.html 
-[] create-ticket submit adapt button css style   
+[x] create-ticket submit adapt button css style   
 
 [x] @detail.html:
         [X] fetch ticket by id

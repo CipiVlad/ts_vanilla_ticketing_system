@@ -19,6 +19,10 @@ body {
     grid-row-gap: 10px;
 }
 
+#info {
+    text-align: center;
+}
+
 .navBar {
     background-color: rgb(160, 40, 40);
     color: salmon;
