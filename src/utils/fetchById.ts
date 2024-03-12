@@ -53,9 +53,12 @@ export function displayDetail(element: Ticket[]) {
 
     //edit button
     const editAnchorTag = document.createElement('a')
-    editAnchorTag.setAttribute('href', "http://localhost:5173/edit-ticket.html")
+    editAnchorTag.setAttribute('href', `http://localhost:5173/edit-ticket.html`)
     editAnchorTag.classList.add('editLink')
     editAnchorTag.innerHTML = 'edit'
+    editAnchorTag.addEventListener("click", () => {
+        console.log(element[0].id)
+    })
 
     //delete button
     const deleteButton = document.createElement('button')
